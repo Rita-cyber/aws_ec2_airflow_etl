@@ -1,4 +1,4 @@
-# aws_ec2_airflow_etl
+# aws_emr_ec2_airflow_etl
 
 
 sudo apt update
