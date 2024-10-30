@@ -2,13 +2,19 @@
 
 
 sudo apt update
+
 sudo apt install docker.io -y
+
 sudo systemctl start docker
+
 sudo usermod -aG docker $ubuntu  # To avoid permission issues
+
 sudo chown ubuntu:docker /var/run/docker.sock
+
 sudo chmod 660 /var/run/docker.sock
 
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.10.2/docker-compose.yaml'
+
 
 mkdir -p ./dags ./logs ./plugins ./config
 echo -e "AIRFLOW_UID=$(id -u)" > .env
